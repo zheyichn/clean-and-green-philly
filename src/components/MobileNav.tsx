@@ -35,7 +35,6 @@ const MobileNav: FC = () => {
         </NavbarBrand>
 
         <NavbarMenuToggle
-          as="nav"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="min-[850px]:hidden flex-end w-fit"
           icon={

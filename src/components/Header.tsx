@@ -14,7 +14,14 @@ import MobileNav from "./MobileNav";
 const Header = () => (
   <>
     <MobileNav />
-    <Navbar className="px-1" maxWidth="full" position="sticky" height="auto" as="div" isBordered>
+    <Navbar
+      className="px-1"
+      maxWidth="full"
+      position="sticky"
+      height="auto"
+      as="div"
+      isBordered
+    >
       <NavbarContent
         as="div"
         className="hidden min-[850px]:flex basis-1/5 sm:basis-full py-4"
