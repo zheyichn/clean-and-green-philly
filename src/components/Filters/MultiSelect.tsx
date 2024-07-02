@@ -24,12 +24,6 @@ const MultiSelect: FC<MultiSelectProps> = ({
   toggleDimension,
   handleSelectionChange,
 }) => {
-  const multiSelectOptions = options.filter((option) => {
-    if (!selectedKeys.includes(option)) {
-      return option;
-    }
-  });
-
   return (
     <div className="space-x-2 min-h-[33.5px]">
       <SelectFilter
@@ -61,12 +55,13 @@ const MultiSelect: FC<MultiSelectProps> = ({
         }}
         onChange={handleSelectionChange}
       >
-        {multiSelectOptions.map((option) => (
+        {options.map((option) => (
           <SelectFilterItem
             key={option}
             value={option}
             classNames={{ base: "multiSelectItem" }}
             shouldHighlightOnFocus={false}
+            aria-selected={selectedKeys.includes(option)}
           >
             {option}
           </SelectFilterItem>
